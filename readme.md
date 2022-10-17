@@ -1,4 +1,4 @@
-# Hackathon 2020 - ARACOMP
+# Hackathon 2022 - ARACOMP
 
 # Tema:
 
