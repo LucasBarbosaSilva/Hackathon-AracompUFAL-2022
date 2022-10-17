@@ -9,12 +9,18 @@
 
 ---
 
-# Introdução
+# 🌲️ Introdução
 
 O Hackathon acontecerá durante todos os dias do Aracomp (de 17 a 19 de outubro), iniciando na segunda-feira (17) com a apresentação e explicação do problema proposto. Durante a terça-feira (18), e na quarta-feira (19) pela manhã ocorrerá a competição propriamente dita. Na quarta durante à tarde, juntamente com o encerramento do Aracomp, será divulgada a equipe vencedora da competição e serão entregues as premiações.
 
-# Regras:
+## 🤔️ O que é um Hackathon?
+O termo Hackathon vem da junção de dois termos em inglês: “hack” (programar de forma excepcional) e “marathon” (maratona). Segundo o site Hackathon Brasil: “é um evento que reúne programadores, designers e outros profissionais ligados ao desenvolvimento de software para uma maratona de programação, cujo objetivo é desenvolver um software ou solução tecnológica que atenda a um fim específico.”
 
+Os times (formados, a princípio, por 3 pessoas) terão de desenvolver algo que tente solucionar um problema no tema **SUSTENTABILIDADE**. Poderão desenvolver algum aplicativo web, mobile,desktop, etc (à escolha do time), com a linguagem de programação/framework que prefefirem.
+
+# 📜️ Regras
+
+## 👥️ Regras para os participantes (times):
 - Cada equipe deve dar um fork neste projeto.
 - Os commits devem ser feitos neste repositório “forkeado”.
 - Commits válidos até quarta-feira meio dia;
@@ -23,7 +29,14 @@ O Hackathon acontecerá durante todos os dias do Aracomp (de 17 a 19 de outubro)
 - A solução não precisa estar 100% completa, pode ser o início dela.
 - Para ser considerado como entrega, precisa ser algo programável, por exemplo: a interface gráfica pronta, com navegação entre telas e dados fakes, ou o backend feito com acesso via API Restful, entre outros.
 - Não serão aceitos projetos só com designs ou a estrutura idealizada em diagramas, precisa ter algo programado até o fim do evento.
-- Ao fim do evento as equipes precisa
+- Será permitido pesquisar códigos na internet, inclusive copiar trechos de códigos prontos, desde que não copie códigos inteiros.
+
+## ⚖️ Regras para os mentores (não fazem parte dos times):
+- Os mentores estarão disponíveis durante a competição e podem dar dicas e sugerir projetos para os participantes;
+- Não podem programar no lugar dos participantes;
+- Podem ajudar qualquer equipe que necessite de ajuda sem, no entanto, compartilhar com outros times informações sobre a solução ou projeto que um time esteja desenvolvendo.
+
+
 
 ---
 
