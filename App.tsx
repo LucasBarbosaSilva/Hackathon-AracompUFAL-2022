@@ -12,7 +12,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/views/Home/index'
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import LinearGradient from 'react-native-linear-gradient'
+import {LinearGradient} from 'react-native-linear-gradient'
 
 
 const Tab = createBottomTabNavigator();
@@ -121,11 +121,11 @@ export default function App() {
             name="Mapa"
             component={Home}
             options={() => ({
-              tabBarIcon: ({ tintColor }) => (
+              tabBarIcon: () => (
                 <View>
-                  <LinearGradient style={styles.iconTabRound} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#D500F9', '#4A148C']}>
-                    <Icon name="plus" size={26} color='#FFF' />
-                  </LinearGradient>
+                  <View style={styles.iconTabRound} >
+                    <Icon name="map" size={26} color='#FFF' />
+                  </View>
                 </View>
               ),
             })}
@@ -165,7 +165,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 6,
-    shadowColor: '#9C27B0',
+    backgroundColor: theme.colors.primary,
+    shadowColor: theme.colors.primary,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 5,
