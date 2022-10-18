@@ -18,6 +18,17 @@ O termo Hackathon vem da junção de dois termos em inglês: “hack” (program
 
 Os times (formados, a princípio, por 3 pessoas) terão de desenvolver algo que tente solucionar um problema no tema **SUSTENTABILIDADE**. Poderão desenvolver algum aplicativo web, mobile,desktop, etc (à escolha do time), com a linguagem de programação/framework que prefefirem.
 
+---
+
+# 🌿️🧠️ Brainstorm de sustentabilidade
+Abaixo estão algumas ideias de vertentes que podem ser seguidas para o projeto de vocês:
+
+<img src="https://user-images.githubusercontent.com/52416026/196519675-171aa606-d2e8-4ce9-9f77-d44cf9ed4a95.png" width="75%"
+     alt="Imagem indisponível. Ideias: Cooperativas e catadores de lixo, Denúncia de más práticas, Objetivos sustentáveis da ONU, Lixo eletrônico, 
+ Descarte correto de lixo, Lixo hospitalar, Resíduos de construção, Gameficação, Práticas sustentáveis, Dicas de reuso de materiais, Economia circular">
+
+---
+
 # 📜️ Regras
 
 ## 👥️ Regras para os participantes (times):
