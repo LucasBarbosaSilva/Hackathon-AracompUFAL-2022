@@ -31,7 +31,7 @@ Os times (formados, a princípio, por 3 pessoas) terão de desenvolver algo que 
 - A solução não precisa estar 100% completa, pode ser o início dela.
 - Para ser considerado como entrega, precisa ser algo programável, por exemplo: a interface gráfica pronta, com navegação entre telas e dados fakes, ou o backend feito com acesso via API Restful, entre outros.
 - Não serão aceitos projetos só com designs ou a estrutura idealizada em diagramas, precisa ter algo programado até o fim do evento.
-- Será permitido pesquisar códigos na internet, inclusive copiar trechos de códigos prontos, desde que não copie códigos inteiros.
+- Será permitido pesquisar códigos na internet, inclusive copiar trechos de códigos prontos, desde que não copie projetos inteiros.
 
 ## ⚖️ Regras para os mentores (não fazem parte dos times):
 - Os mentores estarão disponíveis durante a competição e podem dar dicas e sugerir projetos para os participantes;
