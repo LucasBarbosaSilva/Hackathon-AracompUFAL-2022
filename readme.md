@@ -46,12 +46,13 @@ Os times (formados, a princípio, por 3 pessoas) terão de desenvolver algo que 
 
 Após o final do período disponível para envio dos códigos no Github (12h de quarta-feira), uma banca avaliadora composta por 3 professores irá analisar a solução que cada time tiver enviado (analisando os códigos enviados e, em especial, o pitch). Serão considerados os critérios a seguir para avaliação, cada um podendo ser pontuado de 0 a 10, com seus respectivos pesos. A pontuação final da equipe será a média das notas que cada avaliador der ao time, sendo esta última a soma da nota de todos os critérios, com seus respectivos pesos. Os critérios são:
 
-#### Complexidade do software criado (peso 2)
-* O quão difícil de ser implementada foi / é a solução que o time se propôs a fazer?
-#### Progresso (peso 2)
-* O quanto da solução proposta foi feita? O software está completo, de acordo com o que o time pensou em fazer?
-#### Relevância da solução (peso 2)
+#### Relevância da solução (peso 3)
 * A solução é relevante/útil? De fato soluciona (ou ajuda a solucionar) algum problema REAL no tema sustentabilidade?
+#### Progresso (peso 2.5)
+* O quanto da solução proposta foi feita (qual percentual)? O software está completo, de acordo com o que o time pensou em fazer?
+#### Elaboração do projeto do software (peso 1.5)
+* O quão bem foi elaborado o projeto do software? O que a equipe se propunha a fazer era algo que envolvesse bastante conhecimentos técnicos? O que o time pensou em fazer em termos de código?
+* Ex.: O projeto envolvia criação de interfaces, com integração com banco de dados e a criação de uma IA (mesmo que não seja feito tudo, o que acarretará numa redução da pontuação de "progresso"). Nesse exemplo, a equipe teria uma ótima pontuação neste critério, pois teve uma boa elaboração do projeto.
 #### Aplicabilidade (peso 1)
 * Se a ideia proposta for levada adiante, seria de fato aplicável na realidade? Ou haveria, ainda, muitas barreiras para ser posta em prática?
 #### Criatividade (peso 1)
