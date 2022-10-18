@@ -4,10 +4,11 @@ import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
-import MapView from 'react-native-maps';
-import * as Location from 'expo-location';
 import {ThemeProvider} from 'styled-components' 
 import {theme} from './src/theme/light'
+import * as Location from 'expo-location';
+import MapView, { Marker } from "react-native-maps";
+import { locations_default } from "./locations";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -15,15 +16,20 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
 
+  const locations = {
+    markers: locations_default
+  }
   const [origin, setOrigin] = useState(null)
   const [destination, setDestination] = useState(null)
-
+  const baseView = {
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  }
   useEffect(() => {
     (async function() {
       const {status} = await Location.requestForegroundPermissionsAsync();
       if (status == 'granted') {
         let location = await Location.getCurrentPositionAsync({});
-        console.log(location)
         setOrigin({
           latitude: location.coords.latitude,
           longitude: location.coords.longitude,
@@ -80,6 +86,14 @@ export default function App() {
           showsUserLocation = {true}
           loadingEnabled = {true}
         >
+      {locations.markers.map((marker, index) => (
+          <Marker
+            key={`marker${index}`}
+            coordinate={marker.coordinates}
+            title={marker.title}
+            description={marker.description}
+          />
+        ))}
       </MapView>
     </View>
     </ThemeProvider>
