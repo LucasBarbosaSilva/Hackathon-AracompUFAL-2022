@@ -1,21 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
-
+import MapView, { Marker } from "react-native-maps";
+import { locations_default } from "./locations";
 
 export default function App() {
 
+  const locations = {
+    markers: locations_default
+  }
   const [origin, setOrigin] = useState(null)
   const [destination, setDestination] = useState(null)
-
+  const baseView = {
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  }
   useEffect(() => {
     (async function() {
       const {status} = await Location.requestForegroundPermissionsAsync();
       if (status == 'granted') {
         let location = await Location.getCurrentPositionAsync({});
-        console.log(location)
         setOrigin({
           latitude: location.coords.latitude,
           longitude: location.coords.longitude,
@@ -37,6 +42,13 @@ export default function App() {
           showsUserLocation = {true}
           loadingEnabled = {true}
         >
+      {locations.markers.map(marker => (
+          <Marker
+            coordinate={marker.coordinates}
+            title={marker.title}
+            description={marker.description}
+          />
+        ))}
       </MapView>
     </View>
   );
