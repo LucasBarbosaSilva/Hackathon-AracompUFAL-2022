@@ -1,47 +1,45 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
 import { Text, View, StyleSheet } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
-import {ThemeProvider} from 'styled-components' 
-import {theme} from './src/theme/light'
-import * as Location from 'expo-location';
-import MapView, { Marker } from "react-native-maps";
-import { locations_default } from "./locations";
+import { ThemeProvider } from 'styled-components'
+import { theme } from './src/theme/light'
+// import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Home } from './src/views/Home/index'
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import LinearGradient from 'react-native-linear-gradient'
+
+
+const Tab = createBottomTabNavigator();
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
+function RegisterPoint() {
+  return (
+    <View style={styles.container}>
+      <Text>Categories!</Text>
+    </View>
+  );
+}
+
+function NearbyPoints() {
+  return (
+    <View style={styles.container}>
+      <Text>New Post!</Text>
+    </View>
+  );
+}
+
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
+  // const Drawer = createDrawerNavigator();
 
-  const locations = {
-    markers: locations_default
-  }
-  const [origin, setOrigin] = useState(null)
-  const [destination, setDestination] = useState(null)
-  const baseView = {
-    latitudeDelta: 0.01,
-    longitudeDelta: 0.01,
-  }
-  useEffect(() => {
-    (async function() {
-      const {status} = await Location.requestForegroundPermissionsAsync();
-      if (status == 'granted') {
-        let location = await Location.getCurrentPositionAsync({});
-        setOrigin({
-          latitude: location.coords.latitude,
-          longitude: location.coords.longitude,
-          latitudeDelta: 0.01,
-          longitudeDelta: 0.01,
-        })
-        //setLocation(location);
-      }else{
-        throw new Error("Location permission not granted")
-      }
-    }) ();
-  }, [])
 
   useEffect(() => {
     async function prepare() {
@@ -79,23 +77,62 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <View style={styles.container} onLayout={onLayoutRootView}>
-      <MapView 
-          style={styles.map}
-          initialRegion={origin}
-          showsUserLocation = {true}
-          loadingEnabled = {true}
-        >
-      {locations.markers.map((marker, index) => (
-          <Marker
-            key={`marker${index}`}
-            coordinate={marker.coordinates}
-            title={marker.title}
-            description={marker.description}
+      <NavigationContainer>
+        {/* <Drawer.Navigator
+       drawerType="front"
+       initialRouteName="Profile"
+       drawerContentOptions={{
+         activeTintColor: '#e91e63',
+         itemStyle: { marginVertical: 10 },
+       }}
+>
+  </Drawer.Navigator> */}
+        <View onLayout={onLayoutRootView}>
+        </View>
+        <Tab.Navigator screenOptions={({ route }) => ({
+          tabBarIcon: ({ color, size }) => {
+            let iconName;
+
+            switch (route.name) {
+              case 'Registrar Ponto':
+                iconName = 'plus';
+                break;
+              case 'Mapa':
+                iconName = 'map';
+                break;
+              case 'Onde descartar':
+                iconName = 'list';
+                break;
+              default:
+                iconName = 'circle';
+                break;
+            }
+
+            return <Icon name={iconName} size={size} color={color} />;
+          },
+
+        })} tabBarOptions={{
+          activeTintColor: theme.colors.primary,
+          inactiveTintColor: '#777',
+          showLabel: false,
+        }} >
+          <Tab.Screen name="Registrar Ponto" component={RegisterPoint} />
+          <Tab.Screen
+            name="Mapa"
+            component={Home}
+            options={() => ({
+              tabBarIcon: ({ tintColor }) => (
+                <View>
+                  <LinearGradient style={styles.iconTabRound} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#D500F9', '#4A148C']}>
+                    <Icon name="plus" size={26} color='#FFF' />
+                  </LinearGradient>
+                </View>
+              ),
+            })}
           />
-        ))}
-      </MapView>
-    </View>
+          <Tab.Screen name="Onde descartar" component={NearbyPoints} />
+        </Tab.Navigator>
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
@@ -119,6 +156,20 @@ const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
   },
+  iconTabRound: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    marginBottom: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 6,
+    shadowColor: '#9C27B0',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+  }
 });
 
 
