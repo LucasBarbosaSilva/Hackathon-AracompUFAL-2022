@@ -53,7 +53,7 @@ Abaixo estão algumas ideias de vertentes que podem ser seguidas para o projeto 
 
 ---
 
-# 🎯️ Avaliando os projeto
+# 🎯️ Avaliando os projetos
 
 Após o final do período disponível para envio dos códigos no Github (12h de quarta-feira), uma banca avaliadora composta por 3 professores irá analisar a solução que cada time tiver enviado (analisando os códigos enviados e, em especial, o pitch). Serão considerados os critérios a seguir para avaliação, cada um podendo ser pontuado de 0 a 10, com seus respectivos pesos. A pontuação final da equipe será a média das notas que cada avaliador der ao time, sendo esta última a soma da nota de todos os critérios, com seus respectivos pesos. Os critérios são:
 
