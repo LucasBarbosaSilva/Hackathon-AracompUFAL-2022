@@ -3,13 +3,27 @@
     "name": "greenmaps",
     "slug": "greenmaps",
     "version": "1.0.0",
+    "platforms": ["ios", "android"], 
     "assetBundlePatterns": [
       "**/*"
     ],
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.jpg",
-      "resizeMode":"cover",
+      "image": "./assets/splash.png",
+      "resizeMode":"contain",
       "backgroudColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
     }
   }
 }

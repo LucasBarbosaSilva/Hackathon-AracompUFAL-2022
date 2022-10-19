@@ -11,6 +11,7 @@ import { theme } from './src/theme/light'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/views/Home/index'
+import { RegisterPointScreen } from './src/views/RegisterNavigator/index'
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {LinearGradient} from 'react-native-linear-gradient'
 
@@ -20,13 +21,6 @@ const Tab = createBottomTabNavigator();
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
-function RegisterPoint() {
-  return (
-    <View style={styles.container}>
-      <Text>Categories!</Text>
-    </View>
-  );
-}
 
 function NearbyPoints() {
   return (
@@ -89,7 +83,7 @@ export default function App() {
   </Drawer.Navigator> */}
         <View onLayout={onLayoutRootView}>
         </View>
-        <Tab.Navigator screenOptions={({ route }) => ({
+        <Tab.Navigator initialRouteName='Mapa' screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName;
 
@@ -116,7 +110,7 @@ export default function App() {
           inactiveTintColor: '#777',
           showLabel: false,
         }} >
-          <Tab.Screen name="Registrar Ponto" component={RegisterPoint} />
+          <Tab.Screen name="Registrar Ponto" component={RegisterPointScreen} />
           <Tab.Screen
             name="Mapa"
             component={Home}
@@ -137,24 +131,16 @@ export default function App() {
   );
 }
 
-/*const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});*/
-
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
-    justifyContent: 'flex-end',
+    flex:1,
+    backgroundColor: '#333',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   map: {
-    ...StyleSheet.absoluteFillObject,
+
   },
   iconTabRound: {
     width: 60,
@@ -174,69 +160,3 @@ const styles = StyleSheet.create({
 });
 
 
-// import { StatusBar } from 'expo-status-bar';
-// import React, { useState, useEffect, useRef } from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
-// import MapView from 'react-native-maps';
-// import * as Location from 'expo-location';
-// import {ThemeProvider} from 'styled-components' 
-// import {theme} from './src/theme/light'
-
-
-// export default function App() {
-
-//   const [origin, setOrigin] = useState(null)
-//   const [destination, setDestination] = useState(null)
-
-//   useEffect(() => {
-//     (async function() {
-//       const {status} = await Location.requestForegroundPermissionsAsync();
-//       if (status == 'granted') {
-//         let location = await Location.getCurrentPositionAsync({});
-//         console.log(location)
-//         setOrigin({
-//           latitude: location.coords.latitude,
-//           longitude: location.coords.longitude,
-//           latitudeDelta: 0.01,
-//           longitudeDelta: 0.01,
-//         })
-//         //setLocation(location);
-//       }else{
-//         throw new Error("Location permission not granted")
-//       }
-//     }) ();
-//   }, [])
-
-//   return (
-//     <ThemeProvider theme={theme}>
-//     <View style={styles.container}>
-//       <MapView 
-//           style={styles.map}
-//           initialRegion={origin}
-//           showsUserLocation = {true}
-//           loadingEnabled = {true}
-//         >
-//       </MapView>
-//     </View>
-//     </ThemeProvider>
-//   );
-// }
-
-// /*const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });*/
-// const styles = StyleSheet.create({
-//   container: {
-//     ...StyleSheet.absoluteFillObject,
-//     justifyContent: 'flex-end',
-//     alignItems: 'center',
-//   },
-//   map: {
-//     ...StyleSheet.absoluteFillObject,
-//   },
-// });
