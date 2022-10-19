@@ -13,7 +13,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/views/Home/index'
 import { RegisterPointScreen } from './src/views/RegisterNavigator/index'
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import {NearbyPoints} from './src/views/NearbyPointsNavigator/index'
 import {LinearGradient} from 'react-native-linear-gradient'
+import { ThemeColors } from 'react-navigation';
+import { LocationsProvider } from './src/hooks/Locations'
 
 
 const Tab = createBottomTabNavigator();
@@ -22,13 +25,6 @@ const Tab = createBottomTabNavigator();
 SplashScreen.preventAutoHideAsync();
 
 
-function NearbyPoints() {
-  return (
-    <View style={styles.container}>
-      <Text>New Post!</Text>
-    </View>
-  );
-}
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -71,6 +67,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <LocationsProvider>
       <NavigationContainer>
         {/* <Drawer.Navigator
        drawerType="front"
@@ -83,7 +80,7 @@ export default function App() {
   </Drawer.Navigator> */}
         <View onLayout={onLayoutRootView}>
         </View>
-        <Tab.Navigator initialRouteName='Mapa' screenOptions={({ route }) => ({
+        <Tab.Navigator  initialRouteName='Mapa' screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName;
 
@@ -106,8 +103,9 @@ export default function App() {
           },
 
         })} tabBarOptions={{
-          activeTintColor: theme.colors.primary,
-          inactiveTintColor: '#777',
+          tabStyle: {backgroundColor: theme.colors.primary},
+          activeTintColor: theme.colors.lightPrimary,
+          inactiveTintColor: theme.colors.white,
           showLabel: false,
         }} >
           <Tab.Screen name="Registrar Ponto" component={RegisterPointScreen} />
@@ -127,6 +125,7 @@ export default function App() {
           <Tab.Screen name="Onde descartar" component={NearbyPoints} />
         </Tab.Navigator>
       </NavigationContainer>
+      </LocationsProvider>
     </ThemeProvider>
   );
 }
@@ -151,8 +150,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 6,
-    backgroundColor: theme.colors.primary,
-    shadowColor: theme.colors.primary,
+    backgroundColor: theme.colors.darkPrimary,
+    shadowColor: theme.colors.darkPrimary,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 5,

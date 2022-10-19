@@ -1,11 +1,17 @@
 import React from 'react'
-import { View, } from 'react-native'
 import * as S from './style'
-import {Text} from '../../components'
+import imageURL from '../../../assets/logo.png'
+
+
 export const RegisterPointScreen = () => {
     return (
-        <S.Container >
-            <Text size={'big'}>Cadastrar Ponto de Coleta</Text>
+        <S.Container>
+            <S.LogoContainer>
+             <S.Logo source={imageURL}/>
+            </S.LogoContainer>
+            <S.InputsColumn>
+                {/* <Input/> */}
+            </S.InputsColumn>
         </S.Container>)
 }
 
