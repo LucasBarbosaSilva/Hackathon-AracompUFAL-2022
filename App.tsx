@@ -11,7 +11,7 @@ import { theme } from './src/theme/light'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/views/Home/index'
-import { RegisterPointScreen } from './src/views/RegisterNavigator/index'
+import { NearbyPoints } from './src/views/NearbyPointsNavigator/index'
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {LinearGradient} from 'react-native-linear-gradient'
 
@@ -21,14 +21,15 @@ const Tab = createBottomTabNavigator();
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
-
-function NearbyPoints() {
+function RegisterPoint() {
   return (
     <View style={styles.container}>
-      <Text>New Post!</Text>
+      <Text>Categories!</Text>
     </View>
   );
 }
+
+
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -83,7 +84,7 @@ export default function App() {
   </Drawer.Navigator> */}
         <View onLayout={onLayoutRootView}>
         </View>
-        <Tab.Navigator initialRouteName='Mapa' screenOptions={({ route }) => ({
+        <Tab.Navigator screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName;
 
@@ -110,7 +111,7 @@ export default function App() {
           inactiveTintColor: '#777',
           showLabel: false,
         }} >
-          <Tab.Screen name="Registrar Ponto" component={RegisterPointScreen} />
+          <Tab.Screen name="Registrar Ponto" component={RegisterPoint} />
           <Tab.Screen
             name="Mapa"
             component={Home}
@@ -131,16 +132,24 @@ export default function App() {
   );
 }
 
+/*const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});*/
+
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    backgroundColor: '#333',
-    justifyContent: 'center',
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
   map: {
-
+    ...StyleSheet.absoluteFillObject,
   },
   iconTabRound: {
     width: 60,

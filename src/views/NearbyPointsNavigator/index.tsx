@@ -1,11 +1,8 @@
-import React from 'react';
 
-import { Text, View } from 'react-native';
+import React from 'react';
+import {List} from '../../components/list';
+import { locations_default } from "../../constants/locations";
 
 export const NearbyPoints = () => {
-    return (
-      <View>
-        <Text>New Post!</Text>
-      </View>
-    );
-  }
+    return <List data = {locations_default}/>
+}

@@ -19,6 +19,8 @@
     "expo-permissions": "~13.2.0",
     "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
+    "geolib": "^3.3.3",
+    "native-base": "^3.4.18",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",

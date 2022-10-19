@@ -5,16 +5,16 @@ import { locations_default } from "../../constants/locations";
 import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+
 export const Home = () => {
-    const locations = {
-        markers: locations_default
-      }
+    let markerPosition = {};
       const [origin, setOrigin] = useState(null)
       const [destination, setDestination] = useState(null)
       const baseView = {
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
       }
+      
       useEffect(() => {
         (async function() {
           const {status} = await Location.requestForegroundPermissionsAsync();
@@ -40,15 +40,18 @@ export const Home = () => {
             initialRegion={origin}
             showsUserLocation = {true}
             loadingEnabled = {true}
+            //onPress={e => console.log(e.nativeEvent)}
           >
-        {locations.markers.map((marker, index) => (
+        {locations_default.map((marker, index) => (
             <Marker
               key={`marker${index}`}
+              tappable={true}
               coordinate={marker.coordinates}
               title={marker.title}
               description={marker.description}
             />
           ))}
+         
         </MapView>
       </View>)
 }
