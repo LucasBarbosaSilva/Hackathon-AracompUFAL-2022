@@ -78,7 +78,7 @@ Após o final do período disponível para envio dos códigos no Github (12h de 
 Além de enviar o código do projeto (até 12h na quarta), cada time deverá criar um pitch apresentando o seu projeto, de **até 5 minutos**, **até às 14h da quarta**. Vocês podem gravar o vídeo e nos enviar ou, se preferirem, podem apresentar pessoalmente aos professores da banca. Não é necessário que todos os membros da equipe apresentem (ou apareçam no vídeo).
 Na apresentação, tentem apresentar o máximo de funcionalidades do software criado, apresentando bem o problema que vocês estão tentando solucionar, demonstrando como vocês ajudam na solução do problema, etc. Procurem mostrar a relevância do projeto de vocês para o tema sustentabilidade e tentando mostrar que vocês estão cumprindo cada um dos critérios descritos acima.
 
-O link abaixo contém informações de como criar um pitch:
+O link a seguir contém informações de como criar um pitch:
 [https://pitchbitch.club/2017/04/06/hack-pitch-win-hackathon/](https://pitchbitch.club/2017/04/06/hack-pitch-win-hackathon/)
 
 
