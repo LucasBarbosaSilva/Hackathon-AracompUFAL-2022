@@ -70,8 +70,6 @@ Após o final do período disponível para envio dos códigos no Github (12h de 
 * O quão a ideia é criativa?
 #### Originalidade (peso 1)
 * A ideia é original ou já existem muitas soluções que resolvem o problema de maneira semelhante?
-#### Organização de código (peso 1)
-* O código enviado está minimamente organizado? É fácil de ser lido, editado e escalonado?
 
 ---
 
