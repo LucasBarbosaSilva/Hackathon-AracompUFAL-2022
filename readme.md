@@ -34,9 +34,9 @@ Abaixo estão algumas ideias de vertentes que podem ser seguidas para o projeto 
 ## 👥️ Regras para os participantes (times):
 - Cada equipe deve dar um fork neste projeto.
 - Os commits devem ser feitos neste repositório “forkeado”.
-- Commits válidos até quarta-feira meio dia.
+- Commits válidos até **quarta-feira às 14h**.
 - Além de enviar enviar os códigos no repositório, cada time deverá criar um **pitch**, apresentado seu projeto. A descrição mais detalhada sobre o pitch se encontra abaixo.
-- Os competidores podem programar a qualquer momento, desde a abertura do evento até quarta meio dia, inclusive à noite ; ).
+- Os competidores podem programar a qualquer momento, desde a abertura do evento até quarta às 14h, inclusive à noite ; ).
 - A solução precisa ser programado **durante** a competição. Não serão aceitos projeto criados antes.
 - A UFAL permitiu que viremos a noite nos laboratórios, sendo necessário que antes informemos os nomes pro pessoal da segurança.
 - A solução não precisa estar 100% completa, pode ser o início dela.
@@ -55,7 +55,7 @@ Abaixo estão algumas ideias de vertentes que podem ser seguidas para o projeto 
 
 # 🎯️ Avaliando os projetos
 
-Após o final do período disponível para envio dos códigos no Github (12h de quarta-feira), uma banca avaliadora composta por 3 professores irá analisar a solução que cada time tiver enviado (analisando os códigos enviados e, em especial, o pitch). Serão considerados os critérios a seguir para avaliação, cada um podendo ser pontuado de 0 a 10, com seus respectivos pesos. A pontuação final da equipe será a média das notas que cada avaliador der ao time, sendo esta última a soma da nota de todos os critérios, com seus respectivos pesos. Os critérios são:
+Após o final do período disponível para envio dos códigos no Github (14h de quarta-feira), uma banca avaliadora composta por 3 professores irá analisar a solução que cada time tiver enviado (analisando os códigos enviados e, em especial, o pitch apresentado). Serão considerados os critérios a seguir para avaliação, cada um podendo ser pontuado de 0 a 10, com seus respectivos pesos. A pontuação final da equipe será a média das notas que cada avaliador der ao time, sendo esta última a soma da nota de todos os critérios, com seus respectivos pesos. Os critérios são:
 
 #### Relevância da solução (peso 3)
 * A solução é relevante/útil? De fato soluciona (ou ajuda a solucionar) algum problema REAL no tema sustentabilidade?
@@ -73,10 +73,10 @@ Após o final do período disponível para envio dos códigos no Github (12h de 
 
 ---
 
-# 📽️ Pitch
+# 📽️ Pitch (apresentação aos professores no Meet)
 
-Além de enviar o código do projeto (até 12h na quarta), cada time deverá criar um pitch apresentando o seu projeto, de **até 5 minutos**, **até às 14h da quarta**. Vocês podem gravar o vídeo e nos enviar ou, se preferirem, podem apresentar pessoalmente aos professores da banca. Não é necessário que todos os membros da equipe apresentem (ou apareçam no vídeo).
-Na apresentação, tentem apresentar o máximo de funcionalidades do software criado, apresentando bem o problema que vocês estão tentando solucionar, demonstrando como vocês ajudam na solução do problema, etc. Procurem mostrar a relevância do projeto de vocês para o tema sustentabilidade e tentando mostrar que vocês estão cumprindo cada um dos critérios descritos acima.
+Além de enviar o código do projeto (até 14h na quarta), cada time deverá apresentar o seu projeto, em **até 5 minutos**, **às 14:30h da quarta**. A partir desse horário, por ordem de sorteio, cada equipe entrará em um link do Google Meet que iremos disponibilizar e apresentará seu projeto aos professores da banca. É interessante compartilharem a tela apresentando o software criado. Não é necessário que todos os membros da equipe apresentem (ou apareçam no vídeo).
+Na apresentação, tentem apresentar o máximo de funcionalidades do software, apresentando bem o problema que vocês estão tentando solucionar, demonstrando como vocês ajudam na solução do problema, etc. Procurem mostrar a relevância do projeto de vocês para o tema sustentabilidade e tentando mostrar que vocês estão cumprindo cada um dos critérios descritos acima.
 
 O link a seguir contém informações de como criar um pitch:
 [https://pitchbitch.club/2017/04/06/hack-pitch-win-hackathon/](https://pitchbitch.club/2017/04/06/hack-pitch-win-hackathon/)
